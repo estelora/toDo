@@ -14,11 +14,11 @@
 <div class="container">
   <h1 class="title">toDo</h1>
   <div class="list-container">
-    <ul class="item" ng-controller="ItemController as itemCtrl">
+    <form class="item" ng-controller="ItemController as itemCtrl" ng-submit="item.$valid">
       <input class="complete" type="checkbox">
       <input type="submit text" placeholder="new toDo">
       <span class="remove" X></span>
-    </ul>
+    </form>
   </div>
 </div>
 
