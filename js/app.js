@@ -1,15 +1,24 @@
 (function() {
 
-  var app = angular.module('list', [ ]);
+  var app = angular.module('toDo', [ ]);
+  
+  app.controller('ListController', function(){
+    this.list = items;
 
-  app.controller("ItemController", function(){
+  });
 
-      this.item= {};
+  var items = [
 
-      this.addItem = function(item){
-        list.item.push(this.item);
-        this.item = {};
-      };
-    });
+    {
+      complete: false,
+      text: 'Make a list'
+    },
+
+    {
+      complete: false,
+      text: 'Forget something'
+    }
+
+  ];
 
 })();
