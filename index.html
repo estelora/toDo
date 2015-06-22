@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html ng-app="toDo">
+<html ng-app="list">
 <head>
   <meta charset="utf-8">
   <title>toDo</title>
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='http://fonts.googleapis.com/css?family=Abel|Chewy' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
-<body ng-controller="ListController as listCtrl">
+<body ng-controller="ListController as list">
   
   <div class="container">
     
@@ -18,13 +17,18 @@
     
     <div class="list-wrapper">
     
-      <ul class="list-group" ng-repeat="item in list.items">
-        <li class="list-group-item">
+      <ul class="list-group" >
+        <li class="list-group-item" ng-repeat="item in list.items">
+        <label>
           <input type="checkbox" ng-model= "item.complete">
-          <span class="complete-{{item.complete}}">{{item.text}}</span>
-        </li> 
+          <span class="{{item.complete}}">{{item.text}}</span>
+        </label> 
+        </li>
+        <li class="list-group-item">
+          <form><input type="text" placeholder="new toDo"></form>
+        </li>
       </ul>
-    
+  
       <span class="add-item"><i class="fa fa-plus"></i>Add Item</span>
       <span class="clear-items"><i class="fa fa-times"></i>Clear List</span>
 

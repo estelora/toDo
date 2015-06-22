@@ -1,10 +1,16 @@
 (function() {
 
-  var app = angular.module('toDo', [ ]);
-  
-  app.controller('ListController', function(){
-    this.list = items;
+  var app = angular.module('list', [ ]);
 
+  app.controller('ListController', function(){
+    this.items = items;
+
+    this.items.push( 
+      {
+        complete: false,
+        text: 'hi'
+      }
+    )
   });
 
   var items = [
