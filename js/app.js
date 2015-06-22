@@ -1,30 +1,24 @@
-(function() {
+var toDo = angular.module("toDo", []);
+toDo.factory("items", function () {
+    var items = {};
+    items.data = [{
+        id: "1",
+        title: "Make a list" 
+    }];
+    return items;
+});
 
-  var app = angular.module('list', [ ]);
-
-  app.controller('ListController', function(){
+toDo.controller('ItemsController', function(items) {
     this.items = items;
 
-    this.items.push( 
-      {
-        complete: false,
-        text: 'hi'
-      }
-    )
-  });
-
-  var items = [
-
-    {
-      complete: false,
-      text: 'Make a list'
-    },
-
-    {
-      complete: false,
-      text: 'Forget something'
-    }
-
-  ];
-
-})();
+    this.deleteItem = function (index) {
+        items.data.splice(index, 1);
+    };
+    this.addItem = function () {
+        items.data.push({
+            id: this.items.data.length + 1,
+            title: this.newItemName
+        });
+        this.newItemName = '';
+    };
+});
