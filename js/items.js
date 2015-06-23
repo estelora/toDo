@@ -29,7 +29,7 @@ toDo.factory('items', function () {
    // controller for all items in the list
    // add an item
    // delete an item 
-   //mark item as complete
+   // mark item as complete and update model
    toDo.controller('ItemsController', function(items) {
     this.items = items;
 
@@ -56,8 +56,7 @@ toDo.factory('items', function () {
     };
 
     this.completeItem = function(item) {
-      item.complete = !item.complete; //toggle value
-      console.log("completeItem -done: " + item.complete);
-        //$scope.current = complete;
+      //toggle boolean value
+      item.complete = !item.complete; 
       };
     });

@@ -1,17 +1,21 @@
 <div ng-controller="ItemsController as itemCtrl">
       <form ng-submit="itemCtrl.addItem()" class="nav">
 
-          <li ng-repeat="item in itemCtrl.items.data" >
+          <ul class="list-item" ng-repeat="item in itemCtrl.items.data" >
                <input type ="checkbox" ng-model="itemCtrl.complete" ng-click="itemCtrl.completeItem(item)">
-               <a class="item-profile" href="#/items/item-detail/{{$index}}" ng-click="itemCtrl.getId($index)">{{item.title}}</a>
+               <a class="complete-{{itemCtrl.complete}}" href="#/items/item-detail/{{$index}}" ng-click="itemCtrl.getId($index)">{{item.title}}</a>
               <a ng-click="itemCtrl.deleteItem($index)" class="delete-item">
                 <i class="fa fa-times"></i>
               </a>
-          </li>
-
-          <input type="text" value="ItemName" ng-model="itemCtrl.newItemName"  placeholder="new toDo...">
-          <button  ng-disabled="!itemCtrl.newItemName">
-            <i class="fa fa-plus"></i>
-          </button>
+          </ul>
+  
+          <ul class="list-item">
+            
+            <input type="text" value="ItemName" ng-model="itemCtrl.newItemName"  placeholder="new toDo...">
+            <button  ng-disabled="!itemCtrl.newItemName">
+              <i class="fa fa-plus"></i>
+            </button>
+          </ul>
+          
       </form>
   </div>

@@ -11,16 +11,19 @@ toDo.config(['$routeProvider', function ($routeProvider) {
 }]);
 
 toDo.controller('DetailController', function($routeParams, items) {
-
+  //this is how we got the index of the list object
+  //$routeParams is our friend
+  
   var listItemIndex = ($routeParams.index);
   this.detailItem = items.data[listItemIndex];
-// console.log(this.item);
+  
+  // console.log(this.item);
   // console.log($routeParams);
   // console.log(listItemIndex);
   // console.log(items.data[listItemIndex]);
   
 
-this.cancel=function() {
+this.return=function() {
   window.history.back();
 }
 

@@ -12,4 +12,10 @@ body {
 
 a {
   cursor: pointer;
+  text-decoration: none;
+  
+}
+
+.complete-true {
+  text-decoration: line-through;
 }
