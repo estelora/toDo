@@ -2,7 +2,8 @@
       <form ng-submit="itemCtrl.addItem()" class="nav">
 
           <li ng-repeat="item in itemCtrl.items.data" >
-               <a class="item-profile" href="#/items/item-detail/{{$index}}">{{item.title}}</a>
+               <input type ="checkbox" ng-model="itemCtrl.complete">
+               <a class="item-profile" href="#/items/item-detail/{{$index}}" ng-click="itemCtrl.getId($index)">{{item.title}}</a>
               <a ng-click="itemCtrl.deleteItem($index)" class="delete-item">
                 <i class="fa fa-times"></i>
               </a>

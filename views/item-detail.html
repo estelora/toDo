@@ -1,6 +1,10 @@
-<div ng-controller="DetailController as detailCtrl">
-<h1>Task: {{item.titel}}</h1>
-<h2>Position in List: {{item.id}}</h2>  
+<div>
+  <h2>Details View</h2>
+  <h3>Item {{detailCtrl.detailItem.id}}</h3>  
+  <h3>Task: {{detailCtrl.detailItem.title}}</h3>
+  <h3>Complete? {{detailCtrl.detailItem.complete}}</h3>
 
-<button ng-click="ctrl.cancel();" type="submit"><i class="fa fa-home"></i> Home</button>
+  <button ng-click="detailCtrl.cancel();" type="submit">
+    <i class="fa fa-home"></i> 
+  </button>
 </div>  

@@ -1,26 +1,27 @@
 
-toDo.config('$routeProvider', function($routeProvider){
+toDo.config(function($routeProvider){
   //object to define the route
-  var routeDefinition = {
+  var routeDef= {
     controller: 'ItemsController',
-    controllerAs: 'ItemsCtrl',
+    controllerAs: 'itemCtrl',
     templateUrl: 'views/items.html'
   }
 
   //parsing the route
-  $routeProvider.when('/', routeDefinion);
-  $routeProvider.when('/items', routeDefinition);
+  $routeProvider.when('/', routeDef);
+  $routeProvider.when('/items', routeDef);
 
 });
 
 //list of items data, starting with one item
-toDo.factory("items", function () {
+toDo.factory('items', function () {
   
   var items = {};
   
   items.data = [{
-    id: "1",
-    title: "Make a list"
+    id: '1',
+    title: 'Make a list',
+    complete: false
   }];
   
   return items;
@@ -32,6 +33,11 @@ toDo.factory("items", function () {
  toDo.controller('ItemsController', function(items) {
   this.items = items;
 
+  this.getId = function (index) {
+    var arrayOfItems = items.data;
+    
+  }
+
   this.deleteItem = function (index) {
     items.data.splice(index, 1);
   };
@@ -41,7 +47,8 @@ toDo.factory("items", function () {
     items.data.push({
      
       id: this.items.data.length + 1,
-      title: this.newItemName
+      title: this.newItemName,
+      complete: false
    
     });
 

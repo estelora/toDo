@@ -7,10 +7,21 @@ toDo.config(['$routeProvider', function ($routeProvider) {
   };
 
   //angular parses that var here
-  $routeProvider.when('items/:index', routeDefinition);
+  $routeProvider.when('/items/item-detail/:index', routeDefinition);
 }]);
 
+toDo.controller('DetailController', function($routeParams, items) {
 
-self.cancel=function() {
+  var listItemIndex = ($routeParams.index);
+  this.detailItem = items.data[listItemIndex];
+// console.log(this.item);
+  // console.log($routeParams);
+  // console.log(listItemIndex);
+  // console.log(items.data[listItemIndex]);
+  
+
+this.cancel=function() {
   window.history.back();
 }
+
+});
