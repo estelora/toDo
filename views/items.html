@@ -1,0 +1,16 @@
+<div ng-controller="ItemsController as itemCtrl">
+      <form ng-submit="itemCtrl.addItem()" class="nav">
+
+          <li ng-repeat="item in itemCtrl.items.data" >
+               <a class="item-profile" href="#/items/item-detail/{{$index}}">{{item.title}}</a>
+              <a ng-click="itemCtrl.deleteItem($index)" class="delete-item">
+                <i class="fa fa-times"></i>
+              </a>
+          </li>
+
+          <input type="text" value="ItemName" ng-model="itemCtrl.newItemName"  placeholder="new toDo...">
+          <button  ng-disabled="!itemCtrl.newItemName">
+            <i class="fa fa-plus"></i>
+          </button>
+      </form>
+  </div>
