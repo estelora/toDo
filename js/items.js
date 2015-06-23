@@ -1,4 +1,3 @@
-
 toDo.config(function($routeProvider){
   //object to define the route
   var routeDef= {
@@ -15,7 +14,7 @@ toDo.config(function($routeProvider){
 
 //list of items data, starting with one item
 toDo.factory('items', function () {
-  
+
   var items = {};
   
   items.data = [{
@@ -27,31 +26,38 @@ toDo.factory('items', function () {
   return items;
 });
 
-  /*controller for all items in the list
-   * add an item
-   delete an item */
- toDo.controller('ItemsController', function(items) {
-  this.items = items;
+   // controller for all items in the list
+   // add an item
+   // delete an item 
+   //mark item as complete
+   toDo.controller('ItemsController', function(items) {
+    this.items = items;
 
-  this.getId = function (index) {
-    var arrayOfItems = items.data;
-    
-  }
+    this.getId = function (index) {
+      var arrayOfItems = items.data;
 
-  this.deleteItem = function (index) {
-    items.data.splice(index, 1);
-  };
-  
-  this.addItem = function () {
-    
-    items.data.push({
-     
-      id: this.items.data.length + 1,
-      title: this.newItemName,
-      complete: false
-   
+    }
+
+    this.deleteItem = function (index) {
+      items.data.splice(index, 1);
+    };
+
+    this.addItem = function () {
+
+      items.data.push({
+
+        id: this.items.data.length + 1,
+        title: this.newItemName,
+        complete: false
+
+      });
+
+      this.newItemName = '';
+    };
+
+    this.completeItem = function(item) {
+      item.complete = !item.complete; //toggle value
+      console.log("completeItem -done: " + item.complete);
+        //$scope.current = complete;
+      };
     });
-
-    this.newItemName = '';
-  };
-});
