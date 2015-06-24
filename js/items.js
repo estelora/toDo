@@ -55,13 +55,9 @@ toDo.factory('items', function () {
       this.newItemName = '';
     };
 
-    this.isChecked = function(index) {
-      console.log('checked');
-    };
-
 
     this.completeItem = function(index) {
-    var completeItem = items.data[index];
+      var completeItem = items.data[index];
 
       //toggle boolean value
       items.data[index].complete = !items.data[index].complete;
@@ -69,7 +65,7 @@ toDo.factory('items', function () {
       console.log(items.data);
       console.log(completeItem);
       return(items.data[index].complete);
-      };
-    });
+    };
+  });
 
 

@@ -1,22 +1,22 @@
 <div ng-controller="ItemsController as itemCtrl">
-      <form ng-submit="itemCtrl.addItem()" class="nav">
+  <form ng-submit="itemCtrl.addItem()" class="nav">
 
-          <ul class="list-item" ng-repeat="item in itemCtrl.items.data" >
-               <input  class="checkBox" type ="checkbox" ng-click="itemCtrl.completeItem($index)" ng-model="items.data[index].complete">
-              
-               <a class="complete-{{items.data[index].complete}}" href="#/items/item-detail/{{$index}}" ng-click="itemCtrl.getId($index)">{{item.title}} </a>
+    <ul class="list-item" ng-repeat="item in itemCtrl.items.data" >
+     <input  class="checkBox" type ="checkbox" ng-click="itemCtrl.completeItem($index)" ng-model="items.data[index].complete">
+     
+     <a class="complete-{{items.data[index].complete}}" href="#/items/item-detail/{{$index}}" ng-click="itemCtrl.getId($index)">{{item.title}} </a>
 
-              <a ng-click="itemCtrl.deleteItem($index)" class="delete-item">
-                <i class="fa fa-times"></i>
-              </a>
-          </ul>
+     <a ng-click="itemCtrl.deleteItem($index)" class="delete-item">
+      <i class="fa fa-times"></i>
+    </a>
+  </ul>
   
-          <ul class="list-item">
-            
-            <input type="text" value="ItemName" ng-model="itemCtrl.newItemName"  placeholder="new toDo...">
-            <button  ng-disabled="!itemCtrl.newItemName">
-              <i class="fa fa-plus"></i>
-            </button>
-          </ul>
-      </form>
-  </div>
+  <ul class="list-item">
+    
+    <input type="text" value="ItemName" ng-model="itemCtrl.newItemName"  placeholder="new toDo...">
+    <button  ng-disabled="!itemCtrl.newItemName">
+      <i class="fa fa-plus"></i>
+    </button>
+  </ul>
+</form>
+</div>

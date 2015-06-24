@@ -23,8 +23,8 @@ toDo.controller('DetailController', function($routeParams, items) {
   // console.log(items.data[listItemIndex]);
   
 
-this.return=function() {
-  window.history.back();
-}
+  this.return=function() {
+    window.history.back();
+  }
 
 });
