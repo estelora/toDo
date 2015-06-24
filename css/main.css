@@ -16,3 +16,6 @@ a {
   
 }
 
+.complete-true {
+  text-decoration: line-through;
+}
