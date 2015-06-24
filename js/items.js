@@ -57,10 +57,12 @@ toDo.factory('items', function () {
 
     this.completeItem = function(index) {
     var completeItem = items.data[index];
+
       //toggle boolean value
       items.data[index].complete = !items.data[index].complete;
 
       console.log(items.data);
       console.log(completeItem);
+      return(items.data[index].complete);
       };
     });
