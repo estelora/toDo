@@ -16,19 +16,19 @@ toDo.config(function($routeProvider){
 toDo.factory('items', function () {
 
   var items = {};
-  
+
   items.data = [{
     id: '1',
     title: 'Make a list',
     complete: false
   }];
-  
+
   return items;
 });
 
    // controller for all items in the list
    // add an item
-   // delete an item 
+   // delete an item
    // mark item as complete and update model
    toDo.controller('ItemsController', function(items) {
     this.items = items;
@@ -55,8 +55,12 @@ toDo.factory('items', function () {
       this.newItemName = '';
     };
 
-    this.completeItem = function(item) {
+    this.completeItem = function(index) {
+    var completeItem = items.data[index];
       //toggle boolean value
-      item.complete = !item.complete; 
+      items.data[index].complete = !items.data[index].complete;
+
+      console.log(items.data);
+      console.log(completeItem);
       };
     });
