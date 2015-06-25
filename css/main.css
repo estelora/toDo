@@ -1,21 +1,87 @@
-.title {
- font-family: 'Chewy', cursive;
- letter-spacing: 2px;
- margin-left: 10px;
-}
-
 body {
+  font-size: 16px;
   font-family: 'Abel', sans-serif;
-  background-color: GhostWhite;
-  margin: 10px !important;
+  background-color: aliceblue;
 }
 
 a {
   cursor: pointer;
   text-decoration: none;
-  
+  color: black;
+}
+
+.view-content {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.item-wrapper {
+  padding: 2% 5%;
+}
+
+
+.title {
+ font-family: 'Chewy', cursive;
+ letter-spacing: 2px;
+ margin-left: 20px;
+}
+
+.new-input {
+  font-size: 16px;
+  font-family: 'Abel', sans-serif;
 }
 
 .complete-true {
   text-decoration: line-through;
+  transition: 10ms;
+}
+
+.delete-item {
+  padding-left: 3px;
+}
+
+a.delete-item:hover {
+  color: red;
+  transition: 15ms;
+}
+
+button {
+  border-radius: 4px;
+}
+
+.add-btn {
+  padding: .9%;
+  color: black;
+  background-color: white;
+}
+
+.add-btn:hover {
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+  transition: 15ms;
+}
+
+.home-btn {
+  padding: .9%;
+  color: black;
+  background-color: white;
+  margin-left: -1%;
+}
+
+.home-btn:hover {
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+  transition: 15ms;
+}
+.item-name {
+  font-family: 'Chewy', cursive;
+  letter-spacing: .75px;
+  color: cornflowerblue; 
+  text-shadow: 1.5px 1.5px 1px rgba(0, 0, 139, .8);
+}
+
+.item-detail-info {
+  margin-left: 1%;
 }

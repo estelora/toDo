@@ -1,11 +1,10 @@
-<div>
-  <h2>Details View</h2>
-  <h3>Item {{detailCtrl.detailItem.id}}</h3>  
-  <h3>Task: {{detailCtrl.detailItem.title}}</h3>
-  <h3>Complete? {{detailCtrl.detailItem.complete}}</h3>
+<div class="item-wrapper">
+  <h2 class="item-name">Item {{detailCtrl.detailItem.id}}</h2>  
+  <h3 class="item-detail-info">Task: {{detailCtrl.detailItem.title}}</h3>
+  <h3 class="item-detail-info">Complete? {{detailCtrl.detailItem.complete}}</h3>
 
-  <button ng-click="detailCtrl.return();" type="submit">
-    <i class="fa fa-home"></i> 
+  <button class="home-btn" ng-click="detailCtrl.return();" type="submit">
+    <i class="fa fa-home  fa-2x"></i> 
   </button>
 </div>  
 
