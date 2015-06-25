@@ -1,7 +1,7 @@
 <div class="list-wrapper" ng-controller="ItemsController as itemCtrl">
-  <form ng-submit="itemCtrl.addItem()" class="nav">
+  <form ng-submit="itemCtrl.addItem()" class="item-wrapper">
 
-    <ul class="list-item" ng-repeat="item in itemCtrl.items.data" >
+    <ul class="list-item " ng-repeat="item in itemCtrl.items.data" >
        <h3>
          <input class="checkBox" type ="checkbox" ng-click="itemCtrl.completeItem($index)" ng-model="items.data[index].complete">
          
