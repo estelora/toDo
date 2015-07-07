@@ -2,7 +2,6 @@ body
 {
     font-family: 'Abel', sans-serif;
     font-size: 16px;
-
     background-color: aliceblue;
 }
 
@@ -20,17 +19,44 @@ h2
     line-height: .5;
 }
 
-.view-content
-{
-    margin: 2%;
-
-    background-color: white;
+input[type=text] {
+   border: 5px solid aliceblue;
+   color: black;
+    background-color: RGBA(254, 253, 203, .2);
+    padding: 15px;
+    margin: 0px 5px 0px;
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(179,179,179,1);
+-moz-box-shadow: 2px 2px 2px 0px rgba(179,179,179,1);
+box-shadow: 2px 2px 2px 0px rgba(179,179,179,1);
 }
+
+input[type="checkbox"] {
+ 
+}
+
+input[type="checkbox"] + label span {
+
+}
+
+
+button {
+  padding: 5px;
+  border-radius: 4px;
+background-color: RGBA(254, 253, 203, .2);
+
+  text-decoration:none;
+}
+
+
 
 .item-wrapper
 {
-    padding: 3% 5% 3%;
 
+    padding: 3% 5% 3%;
+    width: 50%;
+    margin-left: 20%;
+    background-color: white;
+    background-image: url("../img/concrete_seamless.png");
     border-top: 3px solid lightslategray;
     border-right: 2px solid lemonchiffon;
     border-bottom: 2px solid lemonchiffon;
@@ -44,23 +70,32 @@ h2
 .title
 {
     font-family: 'Chewy', cursive;
-    font-size: 40px;
-
-    margin-left: 20px;
-
-    letter-spacing: 2px;
+  font-size: 45px;
+  margin-left: 20px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 .list-item
 {
     margin-left: 0;
     padding-left: 0;
+    font-size: 20px;
 }
 
 .new-input
 {
+
     font-family: 'Abel', sans-serif;
-    font-size: 16px;
+    font-size: 19px;
+}
+
+.entered-item {
+
+     margin-left: 0;
+    padding-left: 0;
+    font-size: 20px;
 }
 
 .complete-true
@@ -78,26 +113,19 @@ a.delete-item:hover
 {
     transition: 15ms;
 
-    color: red;
-}
-
-button
-{
-    border-radius: 4px;
+    color: maroon;
 }
 
 .add-btn
 {
-    padding: .9%;
-
+    padding: .5% .75%;
     color: black;
-    background-color: white;
+   
 }
 
 .add-btn:hover
 {
     transition: 15ms;
-
     -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,.75);
        -moz-box-shadow: 1px 1px 1px 0 rgba(0,0,0,.75);
             box-shadow: 1px 1px 1px 0 rgba(0,0,0,.75);
@@ -109,7 +137,7 @@ button
     padding: .9%;
 
     color: black;
-    background-color: white;
+ 
 }
 
 .home-btn:hover
@@ -134,3 +162,8 @@ button
 {
     margin-left: 1%;
 }
+
+
+/*MEDIA QUERIES*/
+
+

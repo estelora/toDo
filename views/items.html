@@ -1,17 +1,20 @@
 <div class="list-wrapper" ng-controller="ItemsController as itemCtrl">
   <form ng-submit="itemCtrl.addItem()" class="item-wrapper">
 
-    <ul class="list-item " ng-repeat="item in itemCtrl.items.data" >
+  
+    <ul class="entered-item" ng-repeat="item in itemCtrl.items.data" >
        <h3>
-         <input class="checkBox" type ="checkbox" ng-click="itemCtrl.completeItem($index)" ng-model="items.data[index].complete">
+         <input class="checkBox" type ="checkbox" ng-click="itemCtrl.completeItem($index)" ng-model="items.data[index].complete"/>
          
          <a class="complete-{{items.data[index].complete}}" href="#/items/item-detail/{{$index}}" ng-click="itemCtrl.getId($index)">{{item.title}}</a>
 
          <a ng-click="itemCtrl.deleteItem($index)" class="delete-item">
-          <i class="fa fa-times"></i>
+          <i class="fa fa-times fa fa-lg"></i>
         </a>
       </h3>
    </ul>
+
+
   
     <ul class="list-item">
       
