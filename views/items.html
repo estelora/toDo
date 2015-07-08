@@ -1,23 +1,36 @@
 <div class="list-wrapper" ng-controller="ItemsController as itemCtrl">
   <form ng-submit="itemCtrl.addItem()" class="item-wrapper">
 
-    
+  
     <ul class="entered-item list-item" ng-repeat="item in itemCtrl.items.data" >
-     
-      <div class="checky">
-        <input type="checkbox" value="None" id="checky" name="checky" checked ng-click="itemCtrl.completeItem($index)" ng-model="items.data[index].complete" /><label for="checky"></label>
-        <a class="complete-{{items.data[index].complete}} item-list-name" href="#/items/item-detail/{{$index}}" ng-click="itemCtrl.getId($index)"/>{{item.title}}</a>
-        <a ng-click="itemCtrl.deleteItem($index)" class="delete-item">
+   
+        <!--  <div class="checkbox">
+          
+         <input class="check" type ="checkbox" ng-click="itemCtrl.completeItem($index)" ng-model="items.data[index].complete"/>
+          <label for="check"><a class="complete-{{items.data[index].complete}}" href="#/items/item-detail/{{$index}}" ng-click="itemCtrl.getId($index)"/>{{item.title}}</a></label>
+         <a ng-click="itemCtrl.deleteItem($index)" class="delete-item">
           <i class="fa fa-times fa fa-lg"></i>
         </a>
-      </div>
+           
+         </div> -->
+
+        <!--  <a class="complete-{{items.data[index].complete}}" href="#/items/item-detail/{{$index}}" ng-click="itemCtrl.getId($index)">{{item.title}}</a> -->
+
+    <!-- .squaredFour -->
+    <div class="checky">
+      <input class="checky" type="checkbox" value="None" id="checky" name="checky" checked ng-click="itemCtrl.completeItem($index)" ng-model="items.data[index].complete" /><label for="checky"></label>
+      <a class="complete-{{items.data[index].complete}} item-list-name" href="#/items/item-detail/{{$index}}" ng-click="itemCtrl.getId($index)"/>{{item.title}}</a>
+         <a ng-click="itemCtrl.deleteItem($index)" class="delete-item">
+          <i class="fa fa-times fa fa-lg"></i>
+        </a>
+    </div>
       
-    </ul>
+   </ul>
 
 
     
 
-    
+  
     <ul class="list-item">
       
       <h3>
